@@ -1,0 +1,8 @@
+{
+  "name": "Gia Su online",
+  "description": "An AI-powered tutor designed to assist students from grade 1 to 12 in Vietnam with their studies, following the official curriculum. The AI adopts the persona of a friendly and encouraging female teacher.",
+  "requestFramePermissions": [
+    "microphone",
+    "camera"
+  ]
+}
