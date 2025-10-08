@@ -1,11 +1,18 @@
 
-import { defineConfig } from 'vite'
+import { defineConfig, loadEnv } from 'vite'
 import react from '@vitejs/plugin-react'
 
 // https://vitejs.dev/config/
-export default defineConfig({
-  plugins: [react()],
-  // QUAN TRỌNG: Thay 'ten-repository-cua-em' bằng tên repository trên GitHub của em.
-  // Ví dụ: nếu repo là https://github.com/username/gia-su-ai, em điền '/gia-su-ai/'
-  base: '/Giasuonline/', 
+export default defineConfig(({ mode }) => {
+  // Tải các biến môi trường từ file .env
+  const env = loadEnv(mode, process.cwd(), '');
+  
+  return {
+    plugins: [react()],
+    base: '/Giasuonline/', 
+    define: {
+      // Thay thế process.env.API_KEY bằng giá trị thật trong quá trình build
+      'process.env.API_KEY': JSON.stringify(env.API_KEY)
+    },
+  }
 })
