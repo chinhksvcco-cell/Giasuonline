@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF--8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Tutor - Cô giáo</title>
+    <link rel="manifest" href="/Giasuonline/assets/manifest-1bPAGcn-.json" />
+    <meta name="theme-color" content="#7C3AED" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script>
+      window.MathJax = {
+        tex: {
+          inlineMath: [['$', '$'], ['\\(', '\\)']],
+          displayMath: [['$$', '$$'], ['\\[', '\\]']]
+        },
+        svg: {
+          fontCache: 'global'
+        },
+        options: {
+          skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+        }
+      };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'tutor-primary': '#7C3AED',
+              'tutor-secondary': '#F3E8FF',
+              'user-primary': '#3B82F6',
+              'user-secondary': '#DBEAFE',
+            },
+          },
+        },
+      }
+    </script>
+    <style>
+      /* General transition for interactive elements */
+      .btn-transition {
+        transition: all 0.2s ease-in-out;
+      }
+      /* "Pressed" effect for buttons */
+      .btn-press:active {
+        transform: scale(0.97);
+        transition: transform 0.1s ease;
+      }
+      
+      /* Keyframes for message and component animations */
+      @keyframes slide-in-right {
+        from { opacity: 0; transform: translateX(20px); }
+        to { opacity: 1; transform: translateX(0); }
+      }
+      @keyframes slide-in-left {
+        from { opacity: 0; transform: translateX(-20px); }
+        to { opacity: 1; transform: translateX(0); }
+      }
+      .animate-slide-in-right {
+        animation: slide-in-right 0.3s ease-out forwards;
+      }
+      .animate-slide-in-left {
+        animation: slide-in-left 0.3s ease-out forwards;
+      }
+    </style>
+
+<link rel="stylesheet" href="/index.css">
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@^19.1.1",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.1.1/",
+    "react/": "https://aistudiocdn.com/react@^19.1.1/",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.21.0",
+    "vite": "https://aistudiocdn.com/vite@^7.1.9",
+    "@vitejs/plugin-react": "https://aistudiocdn.com/@vitejs/plugin-react@^5.0.4"
+  }
+}
+</script>
+  <script type="module" crossorigin src="/Giasuonline/assets/index-B5S4kPOC.js"></script>
+</head>
+  <body class="bg-gray-50">
+    <div id="root"></div>
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/sw.js')
+            .then(registration => {
+              console.log('ServiceWorker registration successful with scope: ', registration.scope);
+            })
+            .catch(error => {
+              console.log('ServiceWorker registration failed: ', error);
+            });
+        });
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,16 @@
+{
+  "short_name": "Cô giáo AI",
+  "name": "Cô giáo của em",
+  "description": "An AI-powered tutor designed to assist students from grade 1 to 12 in Vietnam with their studies, following the official curriculum. The AI adopts the persona of a friendly and encouraging female teacher.",
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "type": "image/svg+xml",
+      "sizes": "192x192 512x512"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#7C3AED",
+  "background_color": "#ffffff"
+}
